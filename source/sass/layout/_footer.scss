@@ -1,0 +1,24 @@
+footer{
+	padding: 5vw;
+	color: $cwhite;
+	background-color: $cblack;
+	@media(max-width: 576px){
+		padding: 30px;
+	}
+	div.container{
+		ul{
+			@extend .no-list;
+			li{
+				padding: 7px;
+				font-size: 20px;
+				text-align: center;
+				a{
+					color: $cwhite;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}

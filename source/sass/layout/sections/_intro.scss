@@ -1,0 +1,139 @@
+section.intro{
+	padding: 0 0 9vw;
+	@media(max-width: 576px){
+		margin-bottom: 40px;
+	}
+	div.container{
+		display: grid;
+		grid-gap: 8vw;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		margin: 0 9vw 0 4vw;
+		@media(max-width: 1024px){
+			grid-gap: 5vw;
+		}
+		@media(max-width: 768px){
+			grid-gap: 10vw;
+			grid-template-columns: 1fr;
+			margin: 0 20px;
+		}
+		@media(max-width: 576px){
+			grid-gap: 15vw;
+		}
+		div.intro_left{
+			padding-top: 100%;
+			@media(max-width: 768px){
+				order: 2;
+			}
+			&:before{
+				@extend .overlay;
+				transform: translate(-25%, -15%);
+				border: 1vw solid $cdark;
+				border-radius: 50%;
+				z-index: 2;
+				@media(max-width: 768px){
+					transform: translate(-20%, -8%);
+					border: 10px solid $cdark;
+				}
+			}
+			figure{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				background-color: $ccorp;
+				border-radius: 50%;
+				overflow: hidden;
+				z-index: 1;
+				&:before{
+					display: block;
+					position: absolute;
+					content: '';
+					width: 50%;
+					height: 50%;
+					left: 5%;
+					top: 10%;
+					border: 1vw solid $cdark;
+					border-radius: 50%;
+					z-index: 1;
+					@media(max-width: 768px){
+						border: 10px solid $cdark;
+					}
+				}
+				img{
+					position: absolute;
+					width: 75%;
+					right: 10%;
+					bottom: 0;
+					z-index: 2;
+				}
+			}
+		}
+		div.intro_right{
+			@media(max-width: 768px){
+				order: 1;
+			}
+			h3.intro_title{
+				margin-bottom: 2vw;
+				color: $cblack;
+				font-size: 3vw;
+				@media(max-width: 1366px){
+					font-size: 3.3vw;
+				}
+				@media(max-width: 1280px){
+					font-size: 36px;
+				}
+				@media(max-width: 1024px){
+					font-size: 28px;
+				}
+				@media(max-width: 768px){
+					margin-bottom: 20px;
+					font-size: 40px;
+				}
+				strong{
+					color: $ccorp;
+				}
+			}
+			div.intro_desc{
+				margin-bottom: 4vw;
+				font-size: 1.25vw;
+				line-height: 1.4;
+				@media(max-width: 1366px){
+					font-size: 1.7vw;
+				}
+				@media(max-width: 1280px){
+					font-size: 18px;
+				}
+				@media(max-width: 1024px){
+					font-size: 16px;
+				}
+				@media(max-width: 768px){
+					margin-bottom: 20px;
+					font-size: 20px;
+				}
+				p{
+					margin-bottom: 1vw;
+					@media(max-width: 768px){
+						margin-bottom: 15px;
+					}
+				}
+			}
+			div.intro_signature{
+				font-size: 1.1vw;
+				@media(max-width: 1366px){
+					font-size: 1.4vw;
+				}
+				@media(max-width: 1280px){
+					font-size: 16px;
+				}
+				@media(max-width: 1024px){
+					font-size: 14px;
+				}
+				@media(max-width: 768px){
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
